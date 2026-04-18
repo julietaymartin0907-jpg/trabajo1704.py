@@ -1,0 +1,11 @@
+capitulo = 0
+serie= 0
+
+serie=int(input("ingrese el capitulo de la serie:"))
+
+while capitulo <=20:
+    capitulo +=1
+    if capitulo % 2 == 0:
+        print ("capitulo",capitulo,"es par")
+    else:
+        print ("capitulo",capitulo, "es impar")
