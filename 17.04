@@ -9,3 +9,96 @@ while capitulo <=20:
         print ("capitulo",capitulo,"es par")
     else:
         print ("capitulo",capitulo, "es impar")
+
+print("=== PAR o IMPAR ===\n")
+
+numero = int(input("Ingrese un número entero: "))
+
+if numero % 2 == 0:
+    print("PAR")
+else:
+    print("IMPAR")
+
+Supongamos que el I.P.C. de los meses de Febrero y Marzo fueron 0.3% y 0.6% respectivamente. Crear un algoritmo en diagrama 
+de flujo que muestre el valor de un producto actualizado y la diferencia de precio entre el mes de febrero y Marzo. 
+
+precio_producto = float(input("Ingrese el precio del producto en febrero ($): "))
+
+ipc_feb = 0.003
+ipc_mar = 0.006
+
+precio_febrero = precio_producto * (1 + ipc_feb)
+precio_marzo = precio_producto * (1 + ipc_mar)
+diferencia   = precio_marzo - precio_febrero
+print ("precio febrero :", precio_febrero)
+
+Confeccione un algoritmo en diagrama de flujo que al leer el neto de una factura, calcule el I.V.A. y de cómo salida el total de la 
+factura
+
+valor_factura= float(input("ingrese valor factura"))
+iva=0.19
+valor_iva= (valor_factura *  iva)
+final= (valor_factura + valor_iva)
+print ("valor total iva incluido es :", final)
+
+Crear un algoritmo en diagrama de flujo que al ingresar dos números imprima el mayor de ellos  o IGUALES si son iguales
+a = int(input("Ingrese el primer número: "))
+b = int(input("Ingrese el segundo número: "))
+
+if a > b:
+    print("El mayor es:", a)
+elif a < b:
+    print("El mayor es:", b)
+else:
+    print("IGUALES") 
+
+Suponga que un individuo desea invertir su capital en un banco y desea saber cuanto dinero ganara después de un mes si el banco 
+paga a razón de 2% mensual. 
+
+inversión=int(input("ingrese inversión"))
+mes=0.2
+ganancia_mensual=( inversión * mes )
+total= (ganancia_mensual + inversión)
+print ("ganancia mensual:", ganancia_mensual)
+print("total",total)
+
+Un vendedor recibe un sueldo base mas un 10% extra por comisión de sus ventas, el vendedor desea saber cuanto dinero obtendrá 
+por concepto de comisiones por las tres ventas que realiza en el mes y el total que recibirá en el mes tomando en cuenta su sueldo 
+base y comisiones. 
+
+sueldo_base = float(input("Ingrese sueldo base: "))
+
+venta1 = float(input("Ingrese venta 1: "))
+venta2 = float(input("Ingrese venta 2: "))
+venta3 = float(input("Ingrese venta 3: "))
+
+comision1 = venta1 * 0.10
+comision2 = venta2 * 0.10
+comision3 = venta3 * 0.10
+
+total_comisiones = comision1 + comision2 + comision3
+total = sueldo_base + total_comisiones
+
+print("Comisiones:", total_comisiones)
+print("Total a recibir:", total)
+
+Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea saber cuanto deberá pagar finalmente por su 
+compra. 
+
+compra=float(input("ingrese valor compra"))
+dscto= 0.15
+dscto_compra=(compra * dscto)
+total_compra=(compra - dscto_compra)
+print ("descuento sobre la compra", dscto_compra)
+print ("total a pagar", total_compra)
+
+Un alumno desea saber cual será su calificación final en la materia de Algoritmos. Dicha calificación se compone de los siguientes 
+porcentajes:
+55% del promedio de sus tres calificaciones parciales. 
+30% de la calificación del examen final.  
+15% de la calificación de un trabajo final.
+
+
+
+print ("precio marzo :", precio_marzo)
+print("la diferencia de precio es :", diferencia)
