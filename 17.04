@@ -100,5 +100,77 @@ porcentajes:
 
 
 
+# Pedir número válido (>5)
+n = int(input("¿Hasta dónde desea la serie?: "))
+
+while n <= 5:
+    print("El número debe ser mayor a 5")
+    n = int(input("Ingrese nuevamente: "))
+
+i = 1
+suma = 0
+serie = ""
+
+while i <= n:
+    if i == 1:
+        suma = suma + i
+        serie = serie + str(i)
+    else:
+        if i % 2 == 0:  # par → suma
+            suma = suma + i
+            serie = serie + "+" + str(i)
+        else:  # impar → resta
+            suma = suma - i
+            serie = serie + "-" + str(i)
+    
+    i = i + 1
+
+print("\nSerie:")
+print(serie + "=" + str(suma))
+
+
+# Precio base
+precio = 10000
+
+# Cantidad de personas
+cantidad = int(input("Ingrese la cantidad de personas: "))
+
+i = 1
+
+while i <= cantidad:
+    print("\nPersona", i)
+    edad = int(input("Ingrese la edad: "))
+
+    if edad < 5:
+        print("No puede entrar al teatro.")
+    else:
+        if edad >= 5 and edad <= 14:
+            descuento = 0.35
+            categoria = "Categoría 1 (5-14 años)"
+        else:
+            if edad >= 15 and edad <= 19:
+                descuento = 0.25
+                categoria = "Categoría 2 (15-19 años)"
+            else:
+                if edad >= 20 and edad <= 60:
+                    descuento = 0
+                    categoria = "Categoría 3 (20-60 años)"
+                else:
+                    descuento = 0.90
+                    categoria = "Categoría 4 (mayores de 60 años)"
+
+        monto_descuento = precio * descuento
+        precio_final = precio - monto_descuento
+
+        print("--- RESULTADO ---")
+        print("Categoría:", categoria)
+        print("Descuento:", int(descuento * 100), "%")
+        print("El teatro deja de percibir: $", int(monto_descuento))
+        print("Precio final: $", int(precio_final))
+
+    i = i + 1
+
+
+
 print ("precio marzo :", precio_marzo)
 print("la diferencia de precio es :", diferencia)
